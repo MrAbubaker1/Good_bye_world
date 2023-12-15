@@ -15,23 +15,7 @@
 
     <header>
         <img src="../Images/eat-up-high-resolution-logo-white-transparent.png" alt="Logo" id="logo">
-        <h1>Eat Up</h1>
-    </header>
-
-    <main>
-        <!-- Add a nav bar to the side -->
-        <nav>
-            <!-- These need to  -->
-            <ul>
-                <li><a href="explore.html">Explore</a></li>
-                <li><a href="kitchen.html">Kitchen</a></li>
-            </ul>
-        </nav>
-    </main>
-
-    <section id="selected-restaurant-section">
-        <h2 id="selected-restaurant-name"></h2>
-        <p id="selected-restaurant-description"></p>
+        <h1 id="title">Eat Up</h1>
 
         <!-- Profile Section -->
         <section id="profile-section">
@@ -61,30 +45,40 @@
             </div>
             <p id="current-profile"></p>
         </section>
+    </header>
 
+    <main>
+        <!-- Add a nav bar to the side -->
+        <nav class="site-nav-bar">
+            <h2>Navigation</h2>
+            <hr>
+            <ul id="nav-pages">
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="kitchen.html">Kitchen</a></li>
+            </ul>
+        </nav>
         
-    </section>
+        <article class="main-content">
+            <!-- Comments Section -->
+            <section id="comments-section">
+                <h3>Comments</h3>
+                <textarea id="comment-input" placeholder="Add a comment..."></textarea>
+                <button id="post-comment-btn">Post Comment</button>
+                <ul id="comment-list"></ul>
+            </section>
+            
+            <!-- Share Section -->
+            <section id="share-section">
+                <h3>Share</h3>
+                <button id="share-btn">Share</button>
+                <p id="share-message"></p>
+            </section>
+        </article>
+    </main>
 
-    <!-- Comments Section -->
-    <section id="comments-section">
-        <h3>Comments</h3>
-        <textarea id="comment-input" placeholder="Add a comment..."></textarea>
-        <button id="post-comment-btn">Post Comment</button>
-        <ul id="comment-list"></ul>
-    </section>
-
-    <!-- Share Section -->
-    <section id="share-section">
-        <h3>Share</h3>
-        <button id="share-btn">Share</button>
-        <p id="share-message"></p>
-    </section>
-    </section>
-
-
-    <!-- Add your HTML components for posting updates, liking, commenting, etc. -->
-
-
+    <footer>
+        <p>something about a footer will go here</p>
+    </footer>
 </body>
 
 </html>

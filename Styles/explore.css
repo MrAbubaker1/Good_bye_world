@@ -4,14 +4,36 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    overflow-y: scroll; /* Make the page scrollable */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    /* overflow-y: scroll; Make the page scrollable */
 }
 
 header {
+    box-sizing: border-box;
     background-color: #333;
-    color: white;
     padding: 1em;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+main {
+    margin-top: 111.875px;
+    margin-bottom: 1em;
+    flex: 1;
+    height: fit-content;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    width: 100%;
+    padding: 10px;
+    color: white;
 }
 
 #logo {
@@ -22,32 +44,43 @@ header {
     left: 10px; /* Adjust the left margin as needed */
 }
 
-
-
-#restaurants-section {
-    display: flex;
+#title {
+    color: white;
 }
 
-#selected-restaurant-section {
-    max-width: 800px;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    flex-grow: 1;
-}
-
-ul {
+#nav-pages {
     list-style: none;
     padding: 0;
+    font-size: 1.3em;
 }
 
 li {
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+#nav-pages a {
+    text-decoration: none;
+    color: black;
 }
 
 li:hover {
     text-decoration: underline;
+}
+
+.site-nav-bar {
+    width: fit-content;
+    height: 100%;
+    border-right: solid 1px #333;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+}
+
+.main-content {
+    padding: 20px;
+    margin-left: 162.688px;
+    height: inherit;
 }
 
 #profile-section {
