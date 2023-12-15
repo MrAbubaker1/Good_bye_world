@@ -1,0 +1,130 @@
+/* This will style the parts that do not change accross pages, like the header, navbar and footer */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    box-sizing: border-box;
+    background-color: #333;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+main {
+    margin-top: 111.875px;
+    margin-bottom: 1em;
+    flex: 1;
+    height: fit-content;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    width: 100%;
+    padding: 10px;
+    color: white;
+}
+
+.title {
+    color: white;
+}
+
+.nav-pages {
+    list-style: none;
+    padding: 0;
+    font-size: 1.3em;
+}
+
+.nav-pages a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.nav-pages li {
+    margin-top: 30px;
+}
+
+.nav-pages a:hover {
+    text-decoration: underline;
+}
+
+.site-nav-bar {
+    width: fit-content;
+    height: 100%;
+    border-right: solid 1px #333;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+}
+
+.main-content {
+    padding: 20px;
+    margin-left: 162.688px;
+    height: inherit;
+}
+
+.logo {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 10px; /* Adjust the top margin as needed */
+    left: 10px; /* Adjust the left margin as needed */
+}
+
+.profile-section {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff; /* Set background color to white */
+    
+}
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Create a circular profile image */
+    cursor: pointer;
+}
+
+.profile-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.profile-options button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.profile-options button:hover {
+    background-color: #0056b3;
+}

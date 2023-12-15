@@ -1,10 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Eat Up - Kitchen</title>
+    <link rel="stylesheet" href="../Styles/statics.css">
+    <link rel="stylesheet" href="../Styles/kitchen.css">
 </head>
+
 <body>
-    <h1>kitchen</h1>
+    <header>
+        <img src="../Images/eat-up-high-resolution-logo-white-transparent.png" alt="Logo" class="logo">
+        <h1 class="title">Eat Up</h1>
+
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="profile-container">
+                <!-- The profile image will need to be updated with the default image -->
+                <img class="profile-image" src="#" alt="Profile Image">
+                <div class="profile-options">
+                    <button id="switch-account-btn">Switch Account</button>
+                    <button id="login-logout-btn">Login/Logout</button>
+                    <button id="add-account-btn">Add Account</button>
+                    <form id="account-form">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" required>
+
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" required>
+
+                        <button type="button" id="add-account-btn">Add Account</button>
+                    </form>
+                </div>
+            </div>
+            <p id="current-profile"></p>
+        </section>
+    </header>
+
+    <main>
+        <!-- Add a nav bar to the side -->
+        <nav class="site-nav-bar">
+            <h2>Navigation</h2>
+            <hr>
+            <ul class="nav-pages">
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="kitchen.html">Kitchen</a></li>
+            </ul>
+        </nav>
+
+        <section class="page-content">
+            <h1>Upload your Kitchen menu</h1>
+            
+            
+            
+            <div class="upload-menu">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" id="uploadInput" name="image" accept="image/*" onchange="previewImage(event)">
+                    
+                    <input type="submit" value="Upload">
+                    <img id="imagePreview" src="#" alt="Preview Image"> <!-- Image preview will be displayed here -->
+                    <button id="cancel" type="button" onclick="cancelPreview()">Cancel</button> <!-- Cancel button -->
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>something about a footer will go here</p>
+    </footer>
+    <script>
+        function previewImage(event) {
+            var reader = new FileReader();
+            var imagePreview = document.getElementById('imagePreview');
+            var imageCancel = document.getElementById('cancel');
+
+            reader.onload = function () {
+                imagePreview.src = reader.result;
+            imagePreview.style.display = 'block'; // Display the image after a file is selected
+            imageCancel.style.display = 'block' ;
+            };
+
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        function cancelPreview() {
+            var uploadInput = document.getElementById('uploadInput');
+            var imagePreview = document.getElementById('imagePreview');
+            var imageCancel = document.getElementById('cancel');
+
+            uploadInput.value = ''; // Clear the file input
+            imagePreview.style.display = 'none'; // Hide the image
+            imageCancel.style.display = 'none' ;
+        }
+    </script>
 </body>
+
 </html>

@@ -7,26 +7,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Kitchen App</title>
+    <link rel="stylesheet" href="../Styles/statics.css">
     <link rel="stylesheet" href="../Styles/explore.css">
-    <script src="../Scripts/script.js"></script>
 </head>
 
 <body>
 
     <header>
-        <img src="../Images/eat-up-high-resolution-logo-white-transparent.png" alt="Logo" id="logo">
-        <h1 id="title">Eat Up</h1>
+        <img src="../Images/eat-up-high-resolution-logo-white-transparent.png" alt="Logo" class="logo">
+        <h1 class="title">Eat Up</h1>
 
         <!-- Profile Section -->
-        <section id="profile-section">
-            <div id="profile-container">
+        <section class="profile-section">
+            <div class="profile-container">
                 <!-- The profile image will need to be updated with the default image -->
-                <img id="profile-image" src="#" alt="Profile Image">
-                <div id="profile-options">
+                <img class="profile-image" src="#" alt="Profile Image">
+                <div class="profile-options">
                     <button id="switch-account-btn">Switch Account</button>
                     <button id="login-logout-btn">Login/Logout</button>
                     <button id="add-account-btn">Add Account</button>
-                    <form id="account-form">
+                    <form if="account-form">
                         <label for="first-name">First Name:</label>
                         <input type="text" id="first-name" required>
 
@@ -52,7 +52,7 @@
         <nav class="site-nav-bar">
             <h2>Navigation</h2>
             <hr>
-            <ul id="nav-pages">
+            <ul class="nav-pages">
                 <li><a href="explore.html">Explore</a></li>
                 <li><a href="kitchen.html">Kitchen</a></li>
             </ul>
@@ -79,6 +79,8 @@
     <footer>
         <p>something about a footer will go here</p>
     </footer>
+
+    <script src="../Scripts/script.js"></script>
 </body>
 
 </html>
