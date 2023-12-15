@@ -1,41 +1,35 @@
 /* Some basic styling, you can add more styles as needed */
 
-.page-content {
-    width: inherit;
-    height: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 40px;
-}
-
 .upload-menu {
     width: 300px;
-    /* margin: 100px auto; */
+    margin: 100px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    
 }
 
 input[type="file"],
 input[type="submit"],
-button[type="button"] {
-    width: 80%;
+button[type="button"],
+button[type="submit"] {
+    width: 250px;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 3px;
     border: 1px solid #ccc;
 }
 
-input[type="submit"] {
+input[type="submit"],
+button[type="submit"] {
     background-color: #333;
     color: #fff;
     cursor: pointer;
 }
-
-input[type="submit"]:hover {
+input[type="submit"]:hover, 
+button[type="submit"]:hover {
     background-color: #555;
 }
 
@@ -45,7 +39,6 @@ button[type="button"] {
     cursor: pointer;
     display: none;
 }
-
 button[type="button"]:hover {
     background-color: red;
 }
@@ -56,4 +49,23 @@ form img {
     margin-top: 10px; /* Add some margin for spacing */
 
     display: none;
+}
+
+.format-table {
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse;
+    width: 60%; /* Adjust the width as needed */
+    text-align: center; /* Center align table content */
+}
+
+th, td {
+    
+    vertical-align: top; /* Align content to the top of cells */
+    text-align: center; /* Align content horizontally within cells */
+}
+
+textarea {
+    font-size: 16px;
+    height: 300px;
+    width: 300px;
 }
