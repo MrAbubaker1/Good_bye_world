@@ -24,23 +24,8 @@
                 <img class="profile-image" src="#" alt="Profile Image">
                 <div class="profile-options">
                     <button id="switch-account-btn">Switch Account</button>
-                    <button id="login-logout-btn">Login/Logout</button>
-                    <button id="add-account-btn">Add Account</button>
-                    <form if="account-form">
-                        <label for="first-name">First Name:</label>
-                        <input type="text" id="first-name" required>
-
-                        <label for="last-name">Last Name:</label>
-                        <input type="text" id="last-name" required>
-
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" required>
-
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" required>
-
-                        <button type="button" id="add-account-btn">Add Account</button>
-                    </form>
+                    <button id="login-logout-btn" onclick="sendToLogin()">Login/Logout</button>
+                    <button id="add-account-btn" onclick="sendToCreate()">Add Account</button>
                 </div>
             </div>
             <p id="current-profile"></p>
@@ -80,7 +65,7 @@
         <p>something about a footer will go here</p>
     </footer>
 
-    <script src="../Scripts/script.js"></script>
+    <script src="../Scripts/profile_options.js"></script>
 </body>
 
 </html>

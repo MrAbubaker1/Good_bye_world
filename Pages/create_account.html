@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Eat Up - Kitchen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - My Kitchen</title>
+    <link rel="stylesheet" href="../Styles/create_account_styles.css">
     <link rel="stylesheet" href="../Styles/statics.css">
-    <link rel="stylesheet" href="../Styles/kitchen.css">
 </head>
 
 <body>
@@ -28,7 +29,6 @@
             <p id="current-profile"></p>
         </section>
     </header>
-
     <main>
         <!-- Add a nav bar to the side -->
         <nav class="site-nav-bar">
@@ -39,28 +39,20 @@
                 <li><a href="kitchen.html">Kitchen</a></li>
             </ul>
         </nav>
-
-        <section class="page-content">
-            <h1>Upload your Kitchen menu</h1>
-            
-            
-            
-            <div class="upload-menu">
-                <form action="/upload" method="post" enctype="multipart/form-data">
-                    <input type="file" id="uploadInput" name="image" accept="image/*" onchange="previewImage(event)">
-                    
-                    <input type="submit" value="Upload">
-                    <img id="imagePreview" src="#" alt="Preview Image"> <!-- Image preview will be displayed here -->
-                    <button id="cancel" type="button" onclick="cancelPreview()">Cancel</button> <!-- Cancel button -->
-                </form>
-            </div>
-        </section>
+        <div class="container">
+            <h2>Create My Kitchen Account</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
     </main>
-
     <footer>
         <p>something about a footer will go here</p>
     </footer>
-    <script src="../Scripts/kitchen.js"></script>
     <script src="../Scripts/profile_options.js"></script>
 </body>
 
