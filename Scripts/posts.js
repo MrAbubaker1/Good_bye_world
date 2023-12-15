@@ -37,22 +37,43 @@ class Post {
             imageEl.width = 300;
             imageEl.height = 300;
             postContainer.append(imageEl)
+
+            //add the post-image class to ensure it is styled correctly
+            imageEl.classList.add("post-image")
         }
 
-        //check if there are comments, if so, create and append the comment element
-        if (this.image) {
-            for (const property in this.comments) {
-                let commentEl = document.createElement("p");
-                let curComment = this.comments[property]
-                commentEl.innerHTML = curComment;
-                postContainer.append(commentEl)
-            }
-        }
+        //build the comments section
+        this.createComments(postContainer)
+        
 
         postContainer.classList.add("post")
 
         //add the post to the DOM
         POSTS_CONTAINER.append(postContainer)
+    }
+
+    createComments(postContainer) {
+        //create an element to store the comments section
+        let commentsContainer = document.createElement("article")
+        commentsContainer.classList.add("comments-container")
+
+        //add a header labelling this as the comments section
+        let commentsHeader = document.createElement("h3")
+        commentsHeader.innerHTML = "Comments"
+        commentsContainer.append(commentsHeader)
+
+        //check if there are comments, if so, create and append the comment element
+        if (Object.keys(this.comments).length > 0) {
+            for (const property in this.comments) {
+                let commentEl = document.createElement("p");
+                let curComment = this.comments[property]
+                commentEl.innerHTML = curComment;
+                commentEl.classList.add("comment")
+                commentsContainer.append(commentEl)
+            }
+        }
+
+        postContainer.append(commentsContainer)
     }
 }
 
