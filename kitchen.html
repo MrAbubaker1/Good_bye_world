@@ -20,21 +20,35 @@
     <h1>Upload your Kitchen menu</h1>
 
 
-    
-    <div class="upload-menu">
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <input type="file" id="uploadInput" name="image" accept="image/*" onchange="previewImage(event)">
+    <table class="format-table">
 
-            <input type="submit" value="Upload">
-        </form>
-        <form action="/upload" method="post" enctype="multipart/form-data">
+        <td>
+            <form id="messageForm" onsubmit="return showMessage()">
+                <textarea id="userMessage" placeholder="Type your menu here"></textarea>
+                <!-- <input type="text" id="userMessage" placeholder="Type your message here" required> -->
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </td>
 
-            <img id="imagePreview" src="#" alt="Preview Image"> <!-- Image preview will be displayed here -->
-            <button id="cancel" type="button" onclick="cancelPreview()">Cancel</button> <!-- Cancel button -->
-        </form>
-    </div>
+        <td>
+            <div class="upload-menu">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" id="uploadInput" name="image" accept="image/*" onchange="previewImage(event)">
 
-    
+                    <input type="submit" value="Upload">
+                </form>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+
+                    <img id="imagePreview" src="#" alt="Preview Image"> <!-- Image preview will be displayed here -->
+                    <button id="cancel" type="button" onclick="cancelPreview()">Cancel</button> <!-- Cancel button -->
+                </form>
+            </div>
+        </td>
+
+    </table>
+
+
     <script>
         function previewImage(event) {
             var reader = new FileReader();
@@ -58,6 +72,12 @@
             uploadInput.value = ''; // Clear the file input
             imagePreview.style.display = 'none'; // Hide the image
             imageCancel.style.display = 'none' ;
+        }
+
+        function showMessage() {
+            var message = document.getElementById('userMessage').value;
+            alert('Your message: ' + message);
+            return false; // Prevent form submission (to keep the alert visible)
         }
     </script>
 

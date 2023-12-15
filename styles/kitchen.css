@@ -41,19 +41,23 @@ header img {
 
 input[type="file"],
 input[type="submit"],
-button[type="button"] {
-    width: 80%;
+button[type="button"],
+button[type="submit"] {
+    width: 250px;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 3px;
     border: 1px solid #ccc;
 }
-input[type="submit"] {
+
+input[type="submit"],
+button[type="submit"] {
     background-color: #333;
     color: #fff;
     cursor: pointer;
 }
-input[type="submit"]:hover {
+input[type="submit"]:hover, 
+button[type="submit"]:hover {
     background-color: #555;
 }
 
@@ -73,4 +77,23 @@ img {
     margin-top: 10px; /* Add some margin for spacing */
 
     display: none;
+}
+
+.format-table {
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse;
+    width: 60%; /* Adjust the width as needed */
+    text-align: center; /* Center align table content */
+}
+
+th, td {
+    
+    vertical-align: top; /* Align content to the top of cells */
+    text-align: center; /* Align content horizontally within cells */
+}
+
+textarea {
+    font-size: 16px;
+    height: 300px;
+    width: 300px;
 }
