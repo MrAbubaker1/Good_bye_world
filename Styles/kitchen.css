@@ -1,5 +1,12 @@
 /* Some basic styling, you can add more styles as needed */
 
+.page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+
 .upload-menu {
     width: 300px;
     margin: 100px auto;
@@ -7,8 +14,6 @@
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    
 }
 
 input[type="file"],
