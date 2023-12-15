@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - My Kitchen App</title>
     <!-- style sheets -->
     <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../Styles/statics.css">
 </head>
-
-
 
 <body>
 
     <header>
-        <a href="#" class="login-button">Login</a>
-        <h1>Eat up</h1>
-        <p>Explore and Enjoy Cooking!</p>
+        <img src="../Images/eat-up-high-resolution-logo-white-transparent.png" alt="photo of a white plastic robot with
+        a black background" class="logo">
+        <h1 class="title">Eat Up</h1>
+
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="profile-container">
+                <!-- The profile image will need to be updated with the default image -->
+                <img class="profile-image" src="#" alt="Profile Image">
+                <div class="profile-options">
+                    <button id="switch-account-btn">Switch Account</button>
+                    <button id="login-logout-btn" onclick="sendToLogin()">Login/Logout</button>
+                    <button id="add-account-btn" onclick="sendToCreate()">Add Account</button>
+                </div>
+            </div>
+            <p id="current-profile"></p>
+        </section>
     </header>
 
-    <div class="login-container">
-        
-        <form action="/login" method="post">
-            <h2>Login to My Kitchen</h2>
-            <input type="text" name="username" class="input-box" placeholder="Username" required>
-            <h2>Password</h2>
-            <input class="input-box" type="password" name="password" placeholder="Password" required>
-            <!-- <input type="submit" value="Login"> -->
-        </form>
-        
-        <div class="button-container">
-            <a href="#" class="create-account-button">Create Account</a>
-            <a href="#" class="guest-account-button">Continue as Guest</a>
+    <main>
+        <!-- Add a nav bar to the side -->
+        <nav class="site-nav-bar">
+            <h2>Navigation</h2>
+            <hr>
+            <ul class="nav-pages">
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="kitchen.html">Kitchen</a></li>
+            </ul>
+        </nav>
+        <div class="login-container">
+
+            <form action="/login" method="post">
+                <h2>Login to My Kitchen</h2>
+                <input type="text" name="username" class="input-box" placeholder="Username" required>
+                <h2>Password</h2>
+                <input class="input-box" type="password" name="password" placeholder="Password" required>
+                <!-- <input type="submit" value="Login"> -->
+            </form>
+
+            <div class="button-container">
+                <a href="#" class="create-account-button">Create Account</a>
+                <a href="#" class="guest-account-button">Continue as Guest</a>
+            </div>
         </div>
-    </div>
-
-
-
-    <!-- <script src="scripts/scripts.js"></script> -->
-
-
-    
+    </main>
+    <footer>
+        <p>something about a footer will go here</p>
+    </footer>
+    <script src="../Scripts/profile_options.js"></script>
 </body>
+
 </html>
