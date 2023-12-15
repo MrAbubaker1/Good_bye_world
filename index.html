@@ -1,0 +1,93 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Kitchen App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <img src="https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Logo" id="logo">
+        <h1>Eat Up</h1>
+    </header>
+
+    <section id="restaurants-section">
+        <h2>Restaurants</h2>
+        <ul id="restaurant-list"></ul>
+    </section>
+
+    
+    <section id="selected-restaurant-section">
+        <h2 id="selected-restaurant-name"></h2>
+        <p id="selected-restaurant-description"></p>
+    
+        <!-- Profile Section -->
+        <section id="profile-section">
+            <div id="profile-container">
+                <img id="profile-image" src="path-to-default-image.jpg" alt="Profile Image">
+                <div id="profile-options">
+                    <button id="switch-account-btn">Switch Account</button>
+                    <button id="login-logout-btn">Login/Logout</button>
+                    <button id="add-account-btn">Add Account</button>
+                    <form id="account-form">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" required>
+
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+
+                    <button type="button" id="add-account-btn">Add Account</button>
+                    </form>
+                </div>
+            </div>
+            <p id="current-profile"></p>
+        </section>
+
+    <!-- Exploring Options Section -->
+    <section id="exploring-options-section">
+        <h3>Exploring Options</h3>
+        <button id="explore-btn">Explore</button>
+        <p id="exploring-result"></p>
+    </section>
+
+    <!-- Popular Foods Section -->
+    <section id="popular-foods-section">
+        <h3>Popular Foods</h3>
+        <button id="Popular-btn">Popular</button>
+        <ul id="popular-foods-list"></ul>
+    </section>
+</section>
+
+ <!-- Comments Section -->
+ <section id="comments-section">
+    <h3>Comments</h3>
+    <textarea id="comment-input" placeholder="Add a comment..."></textarea>
+    <button id="post-comment-btn">Post Comment</button>
+    <ul id="comment-list"></ul>
+</section>
+
+<!-- Share Section -->
+<section id="share-section">
+    <h3>Share</h3>
+    <button id="share-btn">Share</button>
+    <p id="share-message"></p>
+</section>
+</section>
+
+
+    <!-- Add your HTML components for posting updates, liking, commenting, etc. -->
+
+   
+</body>
+</html>
