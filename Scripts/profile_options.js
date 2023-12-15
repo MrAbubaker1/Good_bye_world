@@ -22,5 +22,5 @@ const sendToCreate = () => {
 
 const sendToLogin = () => {
     //send the user to the login page
-    window.location.assign("login.html")
+    window.location.assign("../login.html")
 }
