@@ -1,6 +1,5 @@
 /* Add this to your CSS file */
   
-
   .container {
     background-color: #fff;
     padding: 20px;
@@ -10,9 +9,7 @@
     /* width: fit-content; Make the container only as wide as its content */
     width: 20%;
     position: relative;
-    left: 42%;
-
-    /* text-align: center; */
+    left: 38%;
   }
   
   h2 {
