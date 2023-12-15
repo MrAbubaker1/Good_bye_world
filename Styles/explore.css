@@ -1,5 +1,26 @@
 /* styles.css */
 
+.post {
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    margin-left: 162.688px;
+    height: inherit;
+}
+
 /* ... (remaining styles) */
 
 /* styles.css */

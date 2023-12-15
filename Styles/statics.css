@@ -21,7 +21,7 @@ header {
 }
 
 main {
-    margin-top: 111.875px;
+    margin-top: 157.641px;
     margin-bottom: 1em;
     flex: 1;
     height: fit-content;
@@ -66,27 +66,27 @@ footer {
     padding: 20px;
     text-align: center;
     position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
 }
 
-.main-content {
-    padding: 20px;
-    margin-left: 162.688px;
-    height: inherit;
+.site-nav-bar h2 {
+    margin: 53px 0px;
 }
 
 .logo {
-    width: 50px; /* Adjust the width as needed */
+    width: 100px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
-    position: absolute;
-    top: 10px; /* Adjust the top margin as needed */
-    left: 10px; /* Adjust the left margin as needed */
+    position: relative;
+    left: 4%;
 }
 
 .profile-section {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #fff; /* Set background color to white */
+     /* Set background color to white */
     
 }
 
@@ -127,4 +127,8 @@ footer {
 
 .profile-options button:hover {
     background-color: #0056b3;
+}
+
+button {
+    border-radius: 5px;
 }
